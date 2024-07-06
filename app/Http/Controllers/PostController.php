@@ -49,4 +49,13 @@ class PostController extends Controller
         //redirect to index
         return redirect()->route('posts.index')->with($messages);
     }
+
+    public function show($id)
+    {
+        //get Post By ID
+        $post = Post::find($id);
+
+        //return view
+        return view('posts.show', compact($post));
+    }
 }
