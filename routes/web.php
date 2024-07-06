@@ -7,4 +7,4 @@ Route::get('/', function () {
 });
 
 //route resource
-Route::resource('/post', \App\Http\Controllers\PostController::class);
+Route::resource('/posts', \App\Http\Controllers\PostController::class);
