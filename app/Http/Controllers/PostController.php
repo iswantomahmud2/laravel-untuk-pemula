@@ -29,7 +29,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //validate form
-        $this->validate($request, [
+        $request->validate([
             'image' => 'required|image|mimes:jpg,png,jpg,gif,svg|max:2048',
             'title' => 'required|min:5',
             'content' => 'required|min:10'
@@ -45,10 +45,8 @@ class PostController extends Controller
             'title' => $request->title,
             'content' => $request->content
         ]);
-        $message = [
-            'success' => 'Data Berhasil Disimpan!',
-        ];
+        $messages = ['success' => 'Data Berhasil Disimpan!'];
         //redirect to index
-        return redirect()->route('posts.index')->with($message);
+        return redirect()->route('posts.index')->with($messages);
     }
 }

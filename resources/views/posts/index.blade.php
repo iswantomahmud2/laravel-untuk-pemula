@@ -35,9 +35,9 @@
                                     <td>{{ $post->title }}</td>
                                     <td>{!! $post->content !!}</td>
                                     <td class="text-center">
-                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('postss.destroy', $post->id) }}" method="posts">
-                                            <a href="{{ route('postss.show', $post->id) }}" class="btn btn-sm btn-dark"><i class="fa fa-eye"></i></a>
-                                            <a href="{{ route('postss.edit', $post->id) }}" class="btn btn-sm btn-primary"><i class="fa fa-pencil-alt"></i></a>
+                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('posts.destroy', $post->id) }}" method="posts">
+                                            <a href="{{ route('posts.show', $post->id) }}" class="btn btn-sm btn-dark"><i class="fa fa-eye"></i></a>
+                                            <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-sm btn-primary"><i class="fa fa-pencil-alt"></i></a>
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
@@ -64,15 +64,13 @@
 
     <script>
         //message with toastr
-        @if(session()-> has('success'))
+        @if(session()->has('success'))
 
-        toastr.success('{{ session('
-            success ') }}', 'BERHASIL!');
+        toastr.success('{{ session('success') }}', 'BERHASIL!');
 
-        @elseif(session()-> has('error'))
+        @elseif(session()->has('error'))
 
-        toastr.error('{{ session('
-            error ') }}', 'GAGAL!');
+        toastr.error('{{session('error')}}', 'GAGAL!');
 
         @endif
 
