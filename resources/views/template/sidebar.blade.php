@@ -1,658 +1,548 @@
- <div id="sidebar">
-            <div class="sidebar-wrapper active">
-                <div class="sidebar-header position-relative">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="logo">
-                            <a href="index.html"><img src="{{asset('/mazertemplate/assets/compiled/svg/logo.svg')}}" alt="Logo" srcset=""></a>
-                        </div>
-                        <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20"
-                                height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
-                                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round"
+<div class="iq-sidebar  sidebar-default ">
+    <div class="iq-sidebar-logo d-flex align-items-center">
+        <a href="../backend/index.html" class="header-logo">
+            <img src="{{ asset('/webkit/assets/images/logo.svg') }}" alt="logo">
+            <h3 class="logo-title light-logo">Webkit</h3>
+        </a>
+        <div class="iq-menu-bt-sidebar ml-0">
+            <i class="las la-bars wrapper-menu"></i>
+        </div>
+    </div>
+    <div class="data-scrollbar" data-scroll="1">
+        <nav class="iq-sidebar-menu">
+            <ul id="iq-sidebar-toggle" class="iq-menu">
+                <li class="">
+                    <a href="../backend/index.html" class="svg-icon">
+                        <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        <span class="ml-4">Dashboards</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="../backend/page-project.html" class="svg-icon">
+                        <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2">
+                            </path>
+                            <rect x="6" y="14" width="12" height="8"></rect>
+                        </svg>
+                        <span class="ml-4">Projects</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="../backend/page-task.html" class="svg-icon">
+                        <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2">
+                            </path>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1">
+                            </rect>
+                        </svg>
+                        <span class="ml-4">Task</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="../backend/page-employee.html" class="svg-icon">
+                        <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <span class="ml-4">Employees</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="../backend/page-desk.html" class="svg-icon">
+                        <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                        <span class="ml-4">Desk</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="../backend/page-calender.html" class="svg-icon">
+                        <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2">
+                            </rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span class="ml-4">Calender</span>
+                    </a>
+                </li>
+                <li class=" ">
+                    <a href="#otherpage" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                        <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                            </path>
+                        </svg>
+                        <span class="ml-4">other page</span>
+                        <i class="las la-angle-right iq-arrow-right arrow-active"></i>
+                        <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
+                    </a>
+                    <ul id="otherpage" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                        <li class=" ">
+                            <a href="#user" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                                <svg class="svg-icon" id="p-dash10" width="20" height="20"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="8.5" cy="7" r="4"></circle>
+                                    <polyline points="17 11 19 13 23 9"></polyline>
+                                </svg>
+                                <span class="ml-4">User Details</span>
+                                <i class="las la-angle-right iq-arrow-right arrow-active"></i>
+                                <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
+                            </a>
+                            <ul id="user" class="iq-submenu collapse" data-parent="#otherpage">
+                                <li class="">
+                                    <a href="../app/user-profile.html">
+                                        <i class="las la-minus"></i><span>User Profile</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../app/user-add.html">
+                                        <i class="las la-minus"></i><span>User Add</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../app/user-list.html">
+                                        <i class="las la-minus"></i><span>User List</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class=" ">
+                            <a href="#ui" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                                <svg class="svg-icon" id="p-dash11" width="20" height="20"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round">
                                     <path
-                                        d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2"
-                                        opacity=".3"></path>
-                                    <g transform="translate(-210 -1)">
-                                        <path d="M220.5 2.5v2m6.5.5l-1.5 1.5"></path>
-                                        <circle cx="220.5" cy="11.5" r="4"></circle>
-                                        <path d="m214 5l1.5 1.5m5 14v-2m6.5-.5l-1.5-1.5M214 18l1.5-1.5m-4-5h2m14 0h2">
-                                        </path>
-                                    </g>
-                                </g>
-                            </svg>
-                            <div class="form-check form-switch fs-6">
-                                <input class="form-check-input  me-0" type="checkbox" id="toggle-dark"
-                                    style="cursor: pointer">
-                                <label class="form-check-label"></label>
-                            </div>
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                aria-hidden="true" role="img" class="iconify iconify--mdi" width="20" height="20"
-                                preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                                <path fill="currentColor"
-                                    d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z">
-                                </path>
-                            </svg>
+                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                    </path>
+                                </svg>
+                                <span class="ml-4">UI Elements</span>
+                                <i class="las la-angle-right iq-arrow-right arrow-active"></i>
+                                <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
+                            </a>
+                            <ul id="ui" class="iq-submenu collapse" data-parent="#otherpage">
+                                <li class="">
+                                    <a href="../backend/ui-avatars.html">
+                                        <i class="las la-minus"></i><span>Avatars</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-alerts.html">
+                                        <i class="las la-minus"></i><span>Alerts</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-badges.html">
+                                        <i class="las la-minus"></i><span>Badges</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-breadcrumb.html">
+                                        <i class="las la-minus"></i><span>Breadcrumb</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-buttons.html">
+                                        <i class="las la-minus"></i><span>Buttons</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-buttons-group.html">
+                                        <i class="las la-minus"></i><span>Buttons Group</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-boxshadow.html">
+                                        <i class="las la-minus"></i><span>Box Shadow</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-colors.html">
+                                        <i class="las la-minus"></i><span>Colors</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-cards.html">
+                                        <i class="las la-minus"></i><span>Cards</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-carousel.html">
+                                        <i class="las la-minus"></i><span>Carousel</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-grid.html">
+                                        <i class="las la-minus"></i><span>Grid</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-helper-classes.html">
+                                        <i class="las la-minus"></i><span>Helper classes</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-images.html">
+                                        <i class="las la-minus"></i><span>Images</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-list-group.html">
+                                        <i class="las la-minus"></i><span>list Group</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-media-object.html">
+                                        <i class="las la-minus"></i><span>Media</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-modal.html">
+                                        <i class="las la-minus"></i><span>Modal</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-notifications.html">
+                                        <i class="las la-minus"></i><span>Notifications</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-pagination.html">
+                                        <i class="las la-minus"></i><span>Pagination</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-popovers.html">
+                                        <i class="las la-minus"></i><span>Popovers</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-progressbars.html">
+                                        <i class="las la-minus"></i><span>Progressbars</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-typography.html">
+                                        <i class="las la-minus"></i><span>Typography</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-tabs.html">
+                                        <i class="las la-minus"></i><span>Tabs</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-tooltips.html">
+                                        <i class="las la-minus"></i><span>Tooltips</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/ui-embed-video.html">
+                                        <i class="las la-minus"></i><span>Video</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class=" ">
+                            <a href="#auth" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                                <svg class="svg-icon" id="p-dash12" width="20" height="20"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13">
+                                    </line>
+                                    <line x1="16" y1="17" x2="8" y2="17">
+                                    </line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                                <span class="ml-4">Authentication</span>
+                                <i class="las la-angle-right iq-arrow-right arrow-active"></i>
+                                <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
+                            </a>
+                            <ul id="auth" class="iq-submenu collapse" data-parent="#otherpage">
+                                <li class="">
+                                    <a href="../backend/auth-sign-in.html">
+                                        <i class="las la-minus"></i><span>Login</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/auth-sign-up.html">
+                                        <i class="las la-minus"></i><span>Register</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/auth-recoverpw.html">
+                                        <i class="las la-minus"></i><span>Recover Password</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/auth-confirm-mail.html">
+                                        <i class="las la-minus"></i><span>Confirm Mail</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/auth-lock-screen.html">
+                                        <i class="las la-minus"></i><span>Lock Screen</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="#form" class="collapsed svg-icon" data-toggle="collapse"
+                                aria-expanded="false">
+                                <svg class="svg-icon" id="p-dash13" width="20" height="20"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2">
+                                    </path>
+                                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1">
+                                    </rect>
+                                </svg>
+                                <span class="ml-4">Forms</span>
+                                <i class="las la-angle-right iq-arrow-right arrow-active"></i>
+                                <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
+                            </a>
+                            <ul id="form" class="iq-submenu collapse" data-parent="#otherpage">
+                                <li class="">
+                                    <a href="../backend/form-layout.html">
+                                        <i class="las la-minus"></i><span class="">Form Elements</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/form-input-group.html" class="svg-icon">
+                                        <i class="las la-minus"></i><span class="">Form Input</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/form-validation.html" class="svg-icon">
+                                        <i class="las la-minus"></i><span class="">Form
+                                            Validation</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/form-switch.html" class="svg-icon">
+                                        <i class="las la-minus"></i><span class="">Form Switch</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/form-chechbox.html" class="svg-icon">
+                                        <i class="las la-minus"></i><span class="">Form Checkbox</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/form-radio.html" class="svg-icon">
+                                        <i class="las la-minus"></i><span class="">Form Radio</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/form-textarea.html" class="svg-icon">
+                                        <i class="las la-minus"></i><span class="">Form Textarea</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class=" ">
+                            <a href="#table" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                                <svg class="svg-icon" id="p-dash14" width="20" height="20"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="3" y="3" width="7" height="7"></rect>
+                                    <rect x="14" y="3" width="7" height="7"></rect>
+                                    <rect x="14" y="14" width="7" height="7"></rect>
+                                    <rect x="3" y="14" width="7" height="7"></rect>
+                                </svg>
+                                <span class="ml-4">Table</span>
+                                <i class="las la-angle-right iq-arrow-right arrow-active"></i>
+                                <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
+                            </a>
+                            <ul id="table" class="iq-submenu collapse" data-parent="#otherpage">
+                                <li class="">
+                                    <a href="../backend/tables-basic.html">
+                                        <i class="las la-minus"></i><span>Basic Tables</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/table-data.html">
+                                        <i class="las la-minus"></i><span>Data Table</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/table-tree.html">
+                                        <i class="las la-minus"></i><span>Table Tree</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class=" ">
+                            <a href="#pricing" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                                <svg class="svg-icon" id="p-dash16" width="20" height="20"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3">
+                                    </ellipse>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                </svg>
+                                <span class="ml-4">Pricing</span>
+                                <i class="las la-angle-right iq-arrow-right arrow-active"></i>
+                                <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
+                            </a>
+                            <ul id="pricing" class="iq-submenu collapse" data-parent="#otherpage">
+                                <li class="">
+                                    <a href="../backend/pricing.html">
+                                        <i class="las la-minus"></i><span>Pricing 1</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/pricing-2.html">
+                                        <i class="las la-minus"></i><span>Pricing 2</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="../backend/timeline.html" class="svg-icon">
+                                <svg class="svg-icon" id="p-dash016" width="20" height="20"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span class="ml-4">Timeline</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="../backend/pages-invoice.html" class="svg-icon">
+                                <svg class="svg-icon" id="p-dash07" width="20" height="20"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13">
+                                    </line>
+                                    <line x1="16" y1="17" x2="8" y2="17">
+                                    </line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                                <span class="ml-4">Invoice</span>
+                            </a>
+                        </li>
+                        <li class=" ">
+                            <a href="#pages-error" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                                <svg class="svg-icon" id="p-dash17" width="20" height="20"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                                    </path>
+                                    <line x1="12" y1="9" x2="12" y2="13">
+                                    </line>
+                                    <line x1="12" y1="17" x2="12.01" y2="17">
+                                    </line>
+                                </svg>
+                                <span class="ml-4">Error</span>
+                                <i class="las la-angle-right iq-arrow-right arrow-active"></i>
+                                <i class="las la-angle-down iq-arrow-right arrow-hover"></i>
+                            </a>
+                            <ul id="pages-error" class="iq-submenu collapse" data-parent="#otherpage">
+                                <li class="">
+                                    <a href="../backend/pages-error.html">
+                                        <i class="las la-minus"></i><span>Error 404</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../backend/pages-error-500.html">
+                                        <i class="las la-minus"></i><span>Error 500</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="../backend/pages-blank-page.html">
+                                <svg class="svg-icon" id="p-dash18" width="20" height="20"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                    <polyline points="13 2 13 9 20 9"></polyline>
+                                </svg>
+                                <span class="ml-4">Blank Page</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="../backend/pages-maintenance.html">
+                                <svg class="svg-icon" id="p-dash19" width="20" height="20"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                    </path>
+                                </svg>
+                                <span class="ml-4">Maintenance</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="sidebar-bottom" class="position-relative sidebar-bottom">
+            <div class="card border-none mb-0 shadow-none">
+                <div class="card-body p-0">
+                    <div class="sidebarbottom-content">
+                        <h5 class="mb-3">Task Performed</h5>
+                        <div id="circle-progress-6"
+                            class="sidebar-circle circle-progress circle-progress-primary mb-4" data-min-value="0"
+                            data-max-value="100" data-value="55" data-type="percent">
                         </div>
-                        <div class="sidebar-toggler  x">
-                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        <div class="custom-control custom-radio mb-1">
+                            <input type="radio" id="customRadio6" name="customRadio-1"
+                                class="custom-control-input" checked="">
+                            <label class="custom-control-label" for="customRadio6">Performed task</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio7" name="customRadio-1"
+                                class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio7">Incomplete Task</label>
                         </div>
                     </div>
                 </div>
-                <div class="sidebar-menu">
-                    <ul class="menu">
-                        <li class="sidebar-title">Menu</li>
-
-                        <li class="sidebar-item active ">
-                            <a href="index.html" class='sidebar-link'>
-                                <i class="bi bi-grid-fill"></i>
-                                <span>Dashboard</span>
-                            </a>
-
-
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-stack"></i>
-                                <span>Components</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li class="submenu-item  ">
-                                    <a href="component-accordion.html" class="submenu-link">Accordion</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="component-alert.html" class="submenu-link">Alert</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="component-badge.html" class="submenu-link">Badge</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="component-breadcrumb.html" class="submenu-link">Breadcrumb</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="component-button.html" class="submenu-link">Button</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="component-card.html" class="submenu-link">Card</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="component-carousel.html" class="submenu-link">Carousel</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="component-collapse.html" class="submenu-link">Collapse</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="component-dropdown.html" class="submenu-link">Dropdown</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="component-list-group.html" class="submenu-link">List Group</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="component-modal.html" class="submenu-link">Modal</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="component-navs.html" class="submenu-link">Navs</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="component-pagination.html" class="submenu-link">Pagination</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="component-progress.html" class="submenu-link">Progress</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="component-spinner.html" class="submenu-link">Spinner</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="component-toasts.html" class="submenu-link">Toasts</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="component-tooltip.html" class="submenu-link">Tooltip</a>
-
-                                </li>
-
-                            </ul>
-
-
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-collection-fill"></i>
-                                <span>Extra Components</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li class="submenu-item  ">
-                                    <a href="extra-component-avatar.html" class="submenu-link">Avatar</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="extra-component-divider.html" class="submenu-link">Divider</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="extra-component-date-picker.html" class="submenu-link">Date Picker</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="extra-component-sweetalert.html" class="submenu-link">Sweet Alert</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="extra-component-toastify.html" class="submenu-link">Toastify</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="extra-component-rating.html" class="submenu-link">Rating</a>
-
-                                </li>
-
-                            </ul>
-
-
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-grid-1x2-fill"></i>
-                                <span>Layouts</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li class="submenu-item  ">
-                                    <a href="layout-default.html" class="submenu-link">Default Layout</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="layout-vertical-1-column.html" class="submenu-link">1 Column</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="layout-vertical-navbar.html" class="submenu-link">Vertical Navbar</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="layout-rtl.html" class="submenu-link">RTL Layout</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="layout-horizontal.html" class="submenu-link">Horizontal Menu</a>
-
-                                </li>
-
-                            </ul>
-
-
-                        </li>
-
-                        <li class="sidebar-title">Forms &amp; Tables</li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-hexagon-fill"></i>
-                                <span>Form Elements</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li class="submenu-item  ">
-                                    <a href="form-element-input.html" class="submenu-link">Input</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="form-element-input-group.html" class="submenu-link">Input Group</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="form-element-select.html" class="submenu-link">Select</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="form-element-radio.html" class="submenu-link">Radio</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="form-element-checkbox.html" class="submenu-link">Checkbox</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="form-element-textarea.html" class="submenu-link">Textarea</a>
-
-                                </li>
-
-                            </ul>
-
-
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="form-layout.html" class='sidebar-link'>
-                                <i class="bi bi-file-earmark-medical-fill"></i>
-                                <span>Form Layout</span>
-                            </a>
-
-
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-journal-check"></i>
-                                <span>Form Validation</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li class="submenu-item  ">
-                                    <a href="form-validation-parsley.html" class="submenu-link">Parsley</a>
-
-                                </li>
-
-                            </ul>
-
-
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-pen-fill"></i>
-                                <span>Form Editor</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li class="submenu-item  ">
-                                    <a href="form-editor-quill.html" class="submenu-link">Quill</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="form-editor-ckeditor.html" class="submenu-link">CKEditor</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="form-editor-summernote.html" class="submenu-link">Summernote</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="form-editor-tinymce.html" class="submenu-link">TinyMCE</a>
-
-                                </li>
-
-                            </ul>
-
-
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="table.html" class='sidebar-link'>
-                                <i class="bi bi-grid-1x2-fill"></i>
-                                <span>Table</span>
-                            </a>
-
-
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-file-earmark-spreadsheet-fill"></i>
-                                <span>Datatables</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li class="submenu-item  ">
-                                    <a href="table-datatable.html" class="submenu-link">Datatable</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="table-datatable-jquery.html" class="submenu-link">Datatable (jQuery)</a>
-
-                                </li>
-
-                            </ul>
-
-
-                        </li>
-
-                        <li class="sidebar-title">Extra UI</li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-pentagon-fill"></i>
-                                <span>Widgets</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li class="submenu-item  ">
-                                    <a href="ui-widgets-chatbox.html" class="submenu-link">Chatbox</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="ui-widgets-pricing.html" class="submenu-link">Pricing</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="ui-widgets-todolist.html" class="submenu-link">To-do List</a>
-
-                                </li>
-
-                            </ul>
-
-
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-egg-fill"></i>
-                                <span>Icons</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li class="submenu-item  ">
-                                    <a href="ui-icons-bootstrap-icons.html" class="submenu-link">Bootstrap Icons </a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="ui-icons-fontawesome.html" class="submenu-link">Fontawesome</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="ui-icons-dripicons.html" class="submenu-link">Dripicons</a>
-
-                                </li>
-
-                            </ul>
-
-
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-bar-chart-fill"></i>
-                                <span>Charts</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li class="submenu-item  ">
-                                    <a href="ui-chart-chartjs.html" class="submenu-link">ChartJS</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="ui-chart-apexcharts.html" class="submenu-link">Apexcharts</a>
-
-                                </li>
-
-                            </ul>
-
-
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="ui-file-uploader.html" class='sidebar-link'>
-                                <i class="bi bi-cloud-arrow-up-fill"></i>
-                                <span>File Uploader</span>
-                            </a>
-
-
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-map-fill"></i>
-                                <span>Maps</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li class="submenu-item  ">
-                                    <a href="ui-map-google-map.html" class="submenu-link">Google Map</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="ui-map-jsvectormap.html" class="submenu-link">JS Vector Map</a>
-
-                                </li>
-
-                            </ul>
-
-
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-three-dots"></i>
-                                <span>Multi-level Menu</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li class="submenu-item  has-sub">
-                                    <a href="#" class="submenu-link">First Level</a>
-
-                                    <ul class="submenu submenu-level-2 ">
-
-
-                                        <li class="submenu-item ">
-                                            <a href="ui-multi-level-menu.html" class="submenu-link">Second Level</a>
-                                        </li>
-
-                                        <li class="submenu-item ">
-                                            <a href="#" class="submenu-link">Second Level Menu</a>
-                                        </li>
-
-
-                                    </ul>
-
-                                </li>
-
-                                <li class="submenu-item  has-sub">
-                                    <a href="#" class="submenu-link">Another Menu</a>
-
-                                    <ul class="submenu submenu-level-2 ">
-
-
-                                        <li class="submenu-item ">
-                                            <a href="#" class="submenu-link">Second Level Menu</a>
-                                        </li>
-
-
-                                    </ul>
-
-                                </li>
-
-                            </ul>
-
-
-                        </li>
-
-                        <li class="sidebar-title">Pages</li>
-
-                        <li class="sidebar-item  ">
-                            <a href="application-email.html" class='sidebar-link'>
-                                <i class="bi bi-envelope-fill"></i>
-                                <span>Email Application</span>
-                            </a>
-
-
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="application-chat.html" class='sidebar-link'>
-                                <i class="bi bi-chat-dots-fill"></i>
-                                <span>Chat Application</span>
-                            </a>
-
-
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="application-gallery.html" class='sidebar-link'>
-                                <i class="bi bi-image-fill"></i>
-                                <span>Photo Gallery</span>
-                            </a>
-
-
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="application-checkout.html" class='sidebar-link'>
-                                <i class="bi bi-basket-fill"></i>
-                                <span>Checkout Page</span>
-                            </a>
-
-
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-person-badge-fill"></i>
-                                <span>Authentication</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li class="submenu-item  ">
-                                    <a href="auth-login.html" class="submenu-link">Login</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="auth-register.html" class="submenu-link">Register</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="auth-forgot-password.html" class="submenu-link">Forgot Password</a>
-
-                                </li>
-
-                            </ul>
-
-
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-x-octagon-fill"></i>
-                                <span>Errors</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li class="submenu-item  ">
-                                    <a href="error-403.html" class="submenu-link">403</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="error-404.html" class="submenu-link">404</a>
-
-                                </li>
-
-                                <li class="submenu-item  ">
-                                    <a href="error-500.html" class="submenu-link">500</a>
-
-                                </li>
-
-                            </ul>
-
-
-                        </li>
-
-                        <li class="sidebar-title">Raise Support</li>
-
-                        <li class="sidebar-item  ">
-                            <a href="https://zuramai.github.io/mazer/docs" class='sidebar-link'>
-                                <i class="bi bi-life-preserver"></i>
-                                <span>Documentation</span>
-                            </a>
-
-
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="https://github.com/zuramai/mazer/blob/main/CONTRIBUTING.md" class='sidebar-link'>
-                                <i class="bi bi-puzzle"></i>
-                                <span>Contribute</span>
-                            </a>
-
-
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="https://github.com/zuramai/mazer#donation" class='sidebar-link'>
-                                <i class="bi bi-cash"></i>
-                                <span>Donate</span>
-                            </a>
-
-
-                        </li>
-
-                    </ul>
-                </div>
             </div>
         </div>
+        <div class="pt-5 pb-2"></div>
+    </div>
+</div>

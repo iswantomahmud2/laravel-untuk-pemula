@@ -1,327 +1,643 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Mazer Admin Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Webkit | Responsive Bootstrap 4 Admin Dashboard Template</title>
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ asset('/webkit/assets/images/favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ asset('/webkit/assets/css/backend-plugin.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/webkit/assets/css/backend.css?v=1.0.0') }}">
+    <link rel="stylesheet"
+        href="{{ asset('/webkit/assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/webkit/assets/vendor/remixicon/fonts/remixicon.css') }}">
 
-
-    <link rel="shortcut icon" href="{{asset('/mazertemplate/assets/compiled/svg/favicon.svg')}}" type="image/x-icon">
-    <link rel="shortcut icon"
-        href="{{asset('/mazertemplate/assets/static/images/logo/image.png')}}"
-        type="image/png">
-
-
-
-    <link rel="stylesheet" href="{{asset('/mazertemplate/assets/compiled/css/app.css')}}">
-    <link rel="stylesheet" href="{{asset('/mazertemplate/assets/compiled/css/app-dark.css')}}">
-    <link rel="stylesheet" href="{{asset('/mazertemplate/assets/compiled/css/iconly.css')}}">
+    <link rel="stylesheet" href="{{ asset('/webkit/assets/vendor/tui-calendar/tui-calendar/dist/tui-calendar.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('/webkit/assets/vendor/tui-calendar/tui-date-picker/dist/tui-date-picker.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('/webkit/assets/vendor/tui-calendar/tui-time-picker/dist/tui-time-picker.css') }}">
 </head>
 
-<body>
-    <script src="{{asset('/mazertemplate/assets/static/js/initTheme.js')}}"></script>
-    <div id="app">
-       <!--Sidebar and navbar -->
-	   @include('template.sidebar')
-	   <!--End Sidebar -->
-        <div id="main">
-            <header class="mb-3">
-                <a href="#" class="burger-btn d-block d-xl-none">
-                    <i class="bi bi-justify fs-3"></i>
-                </a>
-            </header>
-
-            <div class="page-heading">
-                <h3>Profile Statistics</h3>
-            </div>
-            <div class="page-content">
-                <section class="row">
-                    <div class="col-12 col-lg-9">
-                        <div class="row">
-                            <div class="col-6 col-lg-3 col-md-6">
-                                <div class="card">
-                                    <div class="card-body px-4 py-4-5">
-                                        <div class="row">
-                                            <div
-                                                class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-                                                <div class="stats-icon purple mb-2">
-                                                    <i class="iconly-boldShow"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                                <h6 class="text-muted font-semibold">Profile Views</h6>
-                                                <h6 class="font-extrabold mb-0">112.000</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3 col-md-6">
-                                <div class="card">
-                                    <div class="card-body px-4 py-4-5">
-                                        <div class="row">
-                                            <div
-                                                class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-                                                <div class="stats-icon blue mb-2">
-                                                    <i class="iconly-boldProfile"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                                <h6 class="text-muted font-semibold">Followers</h6>
-                                                <h6 class="font-extrabold mb-0">183.000</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3 col-md-6">
-                                <div class="card">
-                                    <div class="card-body px-4 py-4-5">
-                                        <div class="row">
-                                            <div
-                                                class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-                                                <div class="stats-icon green mb-2">
-                                                    <i class="iconly-boldAdd-User"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                                <h6 class="text-muted font-semibold">Following</h6>
-                                                <h6 class="font-extrabold mb-0">80.000</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-3 col-md-6">
-                                <div class="card">
-                                    <div class="card-body px-4 py-4-5">
-                                        <div class="row">
-                                            <div
-                                                class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-                                                <div class="stats-icon red mb-2">
-                                                    <i class="iconly-boldBookmark"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                                <h6 class="text-muted font-semibold">Saved Post</h6>
-                                                <h6 class="font-extrabold mb-0">112</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Profile Visit</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div id="chart-profile-visit"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-xl-4">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Profile Visit</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-7">
-                                                <div class="d-flex align-items-center">
-                                                    <svg class="bi text-primary" width="32" height="32" fill="blue"
-                                                        style="width:10px">
-                                                        <use
-                                                            xlink:href="{{asset('/mazertemplate/assets/static/images/bootstrap-icons.svg#circle-fill')}}" />
-                                                    </svg>
-                                                    <h5 class="mb-0 ms-3">Europe</h5>
-                                                </div>
-                                            </div>
-                                            <div class="col-5">
-                                                <h5 class="mb-0 text-end">862</h5>
-                                            </div>
-                                            <div class="col-12">
-                                                <div id="chart-europe"></div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-7">
-                                                <div class="d-flex align-items-center">
-                                                    <svg class="bi text-success" width="32" height="32" fill="blue"
-                                                        style="width:10px">
-                                                        <use
-                                                            xlink:href="{{asset('/mazertemplate/assets/static/images/bootstrap-icons.svg#circle-fill')}}" />
-                                                    </svg>
-                                                    <h5 class="mb-0 ms-3">America</h5>
-                                                </div>
-                                            </div>
-                                            <div class="col-5">
-                                                <h5 class="mb-0 text-end">375</h5>
-                                            </div>
-                                            <div class="col-12">
-                                                <div id="chart-america"></div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-7">
-                                                <div class="d-flex align-items-center">
-                                                    <svg class="bi text-danger" width="32" height="32" fill="blue"
-                                                        style="width:10px">
-                                                        <use
-                                                            xlink:href="{{asset('/mazertemplate/assets/static/images/bootstrap-icons.svg#circle-fill')}}" />
-                                                    </svg>
-                                                    <h5 class="mb-0 ms-3">Indonesia</h5>
-                                                </div>
-                                            </div>
-                                            <div class="col-5">
-                                                <h5 class="mb-0 text-end">1025</h5>
-                                            </div>
-                                            <div class="col-12">
-                                                <div id="chart-indonesia"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-xl-8">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Latest Comments</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-hover table-lg">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Name</th>
-                                                        <th>Comment</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="avatar avatar-md">
-                                                                    <img src="{{asset('/mazertemplate/assets/compiled/jpg/5.jpg')}}">
-                                                                </div>
-                                                                <p class="font-bold ms-3 mb-0">Si Cantik</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <p class=" mb-0">Congratulations on your graduation!</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="col-3">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="avatar avatar-md">
-                                                                    <img src="{{asset('/mazertemplate/assets/compiled/jpg/2.jpg')}}">
-                                                                </div>
-                                                                <p class="font-bold ms-3 mb-0">Si Ganteng</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-auto">
-                                                            <p class=" mb-0">Wow amazing design! Can you make another
-                                                                tutorial for
-                                                                this design?</p>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-3">
-                        <div class="card">
-                            <div class="card-body py-4 px-4">
-                                <div class="d-flex align-items-center">
-                                    <div class="avatar avatar-xl">
-                                        <img src="{{asset('/mazertemplate/assets/compiled/jpg/1.jpg')}}" alt="Face 1">
-                                    </div>
-                                    <div class="ms-3 name">
-                                        <h5 class="font-bold">John Duck</h5>
-                                        <h6 class="text-muted mb-0">@johnducky</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Recent Messages</h4>
-                            </div>
-                            <div class="card-content pb-4">
-                                <div class="recent-message d-flex px-4 py-3">
-                                    <div class="avatar avatar-lg">
-                                        <img src="{{asset('/mazertemplate/assets/compiled/jpg/4.jpg')}}">
-                                    </div>
-                                    <div class="name ms-4">
-                                        <h5 class="mb-1">Hank Schrader</h5>
-                                        <h6 class="text-muted mb-0">@johnducky</h6>
-                                    </div>
-                                </div>
-                                <div class="recent-message d-flex px-4 py-3">
-                                    <div class="avatar avatar-lg">
-                                        <img src="{{asset('/mazertemplate/assets/compiled/jpg/5.jpg')}}">
-                                    </div>
-                                    <div class="name ms-4">
-                                        <h5 class="mb-1">Dean Winchester</h5>
-                                        <h6 class="text-muted mb-0">@imdean</h6>
-                                    </div>
-                                </div>
-                                <div class="recent-message d-flex px-4 py-3">
-                                    <div class="avatar avatar-lg">
-                                        <img src="{{asset('/mazertemplate/assets/compiled/jpg/1.jpg')}}">
-                                    </div>
-                                    <div class="name ms-4">
-                                        <h5 class="mb-1">John Dodol</h5>
-                                        <h6 class="text-muted mb-0">@dodoljohn</h6>
-                                    </div>
-                                </div>
-                                <div class="px-4">
-                                    <button class='btn btn-block btn-xl btn-outline-primary font-bold mt-3'>Start
-                                        Conversation</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Visitors Profile</h4>
-                            </div>
-                            <div class="card-body">
-                                <div id="chart-visitors-profile"></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <footer>
-                <div class="footer clearfix mb-0 text-muted">
-                    <div class="float-start">
-                        <p>2023 &copy; Mazer</p>
-                    </div>
-                    <div class="float-end">
-                        <p>Crafted with <span class="text-danger"><i class="bi bi-heart-fill icon-mid"></i></span>
-                            by <a href="https://saugi.me">Saugi</a></p>
-                    </div>
-                </div>
-            </footer>
+<body class="  ">
+    <!-- loader Start -->
+    <div id="loading">
+        <div id="loading-center">
         </div>
     </div>
-    
-	<!-- Footer Plugin -->
-	@include('template.footer_plugin')
-	<!-- End Footer Plugin -->
+    <!-- loader END -->
+    <!-- Wrapper Start -->
+    <div class="wrapper">
 
+        <!-- Sidebar -->
+        @include('template.sidebar')
+        <!-- End Sidebar -->
+
+        <!-- Top Navbar -->
+        @include('template.navbar_top')
+        <!-- End Top Navbar -->
+        <div class="content-page">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div
+                                    class="d-flex flex-wrap align-items-center justify-content-between breadcrumb-content">
+                                    <h5>Your Projects</h5>
+                                    <div class="d-flex align-items-center">
+                                        <div class="list-grid-toggle d-flex align-items-center mr-3">
+                                            <div data-toggle-extra="tab" data-target-extra="#grid" class="active">
+                                                <div class="grid-icon mr-3">
+                                                    <svg width="20" height="20"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="none" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                        <rect x="3" y="3" width="7" height="7"></rect>
+                                                        <rect x="14" y="3" width="7" height="7"></rect>
+                                                        <rect x="14" y="14" width="7" height="7"></rect>
+                                                        <rect x="3" y="14" width="7" height="7"></rect>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div data-toggle-extra="tab" data-target-extra="#list">
+                                                <div class="grid-icon">
+                                                    <svg width="20" height="20"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        fill="none" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                        <line x1="21" y1="10" x2="3"
+                                                            y2="10"></line>
+                                                        <line x1="21" y1="6" x2="3"
+                                                            y2="6"></line>
+                                                        <line x1="21" y1="14" x2="3"
+                                                            y2="14"></line>
+                                                        <line x1="21" y1="18" x2="3"
+                                                            y2="18"></line>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pl-3 border-left btn-new">
+                                            <a href="#" class="btn btn-primary" data-target="#new-user-modal"
+                                                data-toggle="modal">New Contact</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="grid" class="item-content animate__animated animate__fadeIn active"
+                    data-toggle-extra="tab-content">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card-transparent card-block card-stretch card-height">
+                                <div class="card-body text-center p-0">
+                                    <div class="item">
+                                        <div class="odr-img">
+                                            <img src="/webkit/assets/images/user/01.jpg"
+                                                class="img-fluid rounded-circle avatar-90 m-auto" alt="image">
+                                        </div>
+                                        <div class="odr-content rounded">
+                                            <h4 class="mb-2">Ruben Franci</h4>
+                                            <p class="mb-3">rubenfranci@gmail.com</p>
+                                            <ul class="list-unstyled mb-3">
+                                                <li class="bg-secondary-light rounded-circle iq-card-icon-small mr-4">
+                                                    <i class="ri-mail-open-line m-0"></i>
+                                                </li>
+                                                <li class="bg-primary-light rounded-circle iq-card-icon-small mr-4"><i
+                                                        class="ri-chat-3-line m-0"></i></li>
+                                                <li class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                        class="ri-phone-line m-0"></i></li>
+                                            </ul>
+                                            <div class="pt-3 border-top">
+                                                <a href="#" class="btn btn-primary">Message</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card-transparent card-block card-stretch card-height">
+                                <div class="card-body text-center p-0">
+                                    <div class="item">
+                                        <div class="odr-img">
+                                            <img src="/webkit/assets/images/user/02.jpg"
+                                                class="img-fluid rounded-circle avatar-90 m-auto" alt="image">
+                                        </div>
+                                        <div class="odr-content rounded">
+                                            <h4 class="mb-2">Kaylynn Press</h4>
+                                            <p class="mb-3">kaylynnpress@gmail.com</p>
+                                            <ul class="list-unstyled mb-3">
+                                                <li class="bg-secondary-light rounded-circle iq-card-icon-small mr-4">
+                                                    <i class="ri-mail-open-line m-0"></i>
+                                                </li>
+                                                <li class="bg-primary-light rounded-circle iq-card-icon-small mr-4"><i
+                                                        class="ri-chat-3-line m-0"></i></li>
+                                                <li class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                        class="ri-phone-line m-0"></i></li>
+                                            </ul>
+                                            <div class="pt-3 border-top">
+                                                <a href="#" class="btn btn-primary">Message</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card-transparent card-block card-stretch card-height">
+                                <div class="card-body text-center p-0">
+                                    <div class="item">
+                                        <div class="odr-img">
+                                            <img src="/webkit/assets/images/user/03.jpg"
+                                                class="img-fluid rounded-circle avatar-90 m-auto" alt="image">
+                                        </div>
+                                        <div class="odr-content rounded">
+                                            <h4 class="mb-2">Corey Press</h4>
+                                            <p class="mb-3">coreypress@gmail.com</p>
+                                            <ul class="list-unstyled mb-3">
+                                                <li class="bg-secondary-light rounded-circle iq-card-icon-small mr-4">
+                                                    <i class="ri-mail-open-line m-0"></i>
+                                                </li>
+                                                <li class="bg-primary-light rounded-circle iq-card-icon-small mr-4"><i
+                                                        class="ri-chat-3-line m-0"></i></li>
+                                                <li class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                        class="ri-phone-line m-0"></i></li>
+                                            </ul>
+                                            <div class="pt-3 border-top">
+                                                <a href="#" class="btn btn-primary">Message</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card-transparent card-block card-stretch card-height">
+                                <div class="card-body text-center p-0">
+                                    <div class="item">
+                                        <div class="odr-img">
+                                            <img src="/webkit/assets/images/user/04.jpg"
+                                                class="img-fluid rounded-circle avatar-90 m-auto" alt="image">
+                                        </div>
+                                        <div class="odr-content rounded">
+                                            <h4 class="mb-2">Zain Carder</h4>
+                                            <p class="mb-3">zaincarder@gmail.com</p>
+                                            <ul class="list-unstyled mb-3">
+                                                <li class="bg-secondary-light rounded-circle iq-card-icon-small mr-4">
+                                                    <i class="ri-mail-open-line m-0"></i>
+                                                </li>
+                                                <li class="bg-primary-light rounded-circle iq-card-icon-small mr-4"><i
+                                                        class="ri-chat-3-line m-0"></i></li>
+                                                <li class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                        class="ri-phone-line m-0"></i></li>
+                                            </ul>
+                                            <div class="pt-3 border-top">
+                                                <a href="#" class="btn btn-primary">Message</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card-transparent card-block card-stretch card-height">
+                                <div class="card-body text-center p-0">
+                                    <div class="item">
+                                        <div class="odr-img">
+                                            <img src="/webkit/assets/images/user/05.jpg"
+                                                class="img-fluid rounded-circle avatar-90 m-auto" alt="image">
+                                        </div>
+                                        <div class="odr-content rounded">
+                                            <h4 class="mb-2">Erin Donin</h4>
+                                            <p class="mb-3">erindonin@gmail.com</p>
+                                            <ul class="list-unstyled mb-3">
+                                                <li class="bg-secondary-light rounded-circle iq-card-icon-small mr-4">
+                                                    <i class="ri-mail-open-line m-0"></i>
+                                                </li>
+                                                <li class="bg-primary-light rounded-circle iq-card-icon-small mr-4"><i
+                                                        class="ri-chat-3-line m-0"></i></li>
+                                                <li class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                        class="ri-phone-line m-0"></i></li>
+                                            </ul>
+                                            <div class="pt-3 border-top">
+                                                <a href="#" class="btn btn-primary">Message</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card-transparent card-block card-stretch card-height">
+                                <div class="card-body text-center p-0">
+                                    <div class="item">
+                                        <div class="odr-img">
+                                            <img src="/webkit/assets/images/user/06.jpg"
+                                                class="img-fluid rounded-circle avatar-90 m-auto" alt="image">
+                                        </div>
+                                        <div class="odr-content rounded">
+                                            <h4 class="mb-2">Mira Herwitz</h4>
+                                            <p class="mb-3">miraherwitz@gmail.com</p>
+                                            <ul class="list-unstyled mb-3">
+                                                <li class="bg-secondary-light rounded-circle iq-card-icon-small mr-4">
+                                                    <i class="ri-mail-open-line m-0"></i>
+                                                </li>
+                                                <li class="bg-primary-light rounded-circle iq-card-icon-small mr-4"><i
+                                                        class="ri-chat-3-line m-0"></i></li>
+                                                <li class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                        class="ri-phone-line m-0"></i></li>
+                                            </ul>
+                                            <div class="pt-3 border-top">
+                                                <a href="#" class="btn btn-primary">Message</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card-transparent card-block card-stretch card-height">
+                                <div class="card-body text-center p-0">
+                                    <div class="item">
+                                        <div class="odr-img">
+                                            <img src="/webkit/assets/images/user/07.jpg"
+                                                class="img-fluid rounded-circle avatar-90 m-auto" alt="image">
+                                        </div>
+                                        <div class="odr-content rounded">
+                                            <h4 class="mb-2">Kaiya George</h4>
+                                            <p class="mb-3">kaiyageorge@gmail.com</p>
+                                            <ul class="list-unstyled mb-3">
+                                                <li class="bg-secondary-light rounded-circle iq-card-icon-small mr-4">
+                                                    <i class="ri-mail-open-line m-0"></i>
+                                                </li>
+                                                <li class="bg-primary-light rounded-circle iq-card-icon-small mr-4"><i
+                                                        class="ri-chat-3-line m-0"></i></li>
+                                                <li class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                        class="ri-phone-line m-0"></i></li>
+                                            </ul>
+                                            <div class="pt-3 border-top">
+                                                <a href="#" class="btn btn-primary">Message</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card-transparent card-block card-stretch card-height">
+                                <div class="card-body text-center p-0">
+                                    <div class="item">
+                                        <div class="odr-img">
+                                            <img src="/webkit/assets/images/user/08.jpg"
+                                                class="img-fluid rounded-circle avatar-90 m-auto" alt="image">
+                                        </div>
+                                        <div class="odr-content rounded">
+                                            <h4 class="mb-2">Lincoln George</h4>
+                                            <p class="mb-3">lincolngeorge@gmail.com</p>
+                                            <ul class="list-unstyled mb-3">
+                                                <li class="bg-secondary-light rounded-circle iq-card-icon-small mr-4">
+                                                    <i class="ri-mail-open-line m-0"></i>
+                                                </li>
+                                                <li class="bg-primary-light rounded-circle iq-card-icon-small mr-4"><i
+                                                        class="ri-chat-3-line m-0"></i></li>
+                                                <li class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                        class="ri-phone-line m-0"></i></li>
+                                            </ul>
+                                            <div class="pt-3 border-top">
+                                                <a href="#" class="btn btn-primary">Message</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card-transparent card-block card-stretch card-height">
+                                <div class="card-body text-center p-0">
+                                    <div class="item">
+                                        <div class="odr-img">
+                                            <img src="/webkit/assets/images/user/09.jpg"
+                                                class="img-fluid rounded-circle avatar-90 m-auto" alt="image">
+                                        </div>
+                                        <div class="odr-content rounded">
+                                            <h4 class="mb-2">Paityn Siphron</h4>
+                                            <p class="mb-3">paitynsiphron@gmail.com</p>
+                                            <ul class="list-unstyled mb-3">
+                                                <li class="bg-secondary-light rounded-circle iq-card-icon-small mr-4">
+                                                    <i class="ri-mail-open-line m-0"></i>
+                                                </li>
+                                                <li class="bg-primary-light rounded-circle iq-card-icon-small mr-4"><i
+                                                        class="ri-chat-3-line m-0"></i></li>
+                                                <li class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                        class="ri-phone-line m-0"></i></li>
+                                            </ul>
+                                            <div class="pt-3 border-top">
+                                                <a href="#" class="btn btn-primary">Message</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="list" class="item-content animate__animated animate__fadeIn"
+                    data-toggle-extra="tab-content">
+                    <div class="table-responsive rounded bg-white mb-4">
+                        <table class="table mb-0 table-borderless tbl-server-info">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <img src="/webkit/assets/images/user/01.jpg"
+                                                class="img-fluid rounded-circle avatar-40" alt="image">
+                                            <h5 class="ml-3">Paityn Siphron</h5>
+                                        </div>
+                                    </td>
+                                    <td>paitynsiphron@gmail.com</td>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <div class="bg-secondary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-mail-open-line m-0"></i></div>
+                                            <div class="bg-primary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-chat-3-line m-0"></i></div>
+                                            <div class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                    class="ri-phone-line m-0"></i></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary">Message</a>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <a href="#" class="text-body"><i class="las la-pen mr-3"></i></a>
+                                            <a href="#" class="text-body"><i
+                                                    class="las la-trash-alt mr-0"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <img src="/webkit/assets/images/user/02.jpg"
+                                                class="img-fluid rounded-circle avatar-40" alt="image">
+                                            <h5 class="ml-3">Kaylynn Press</h5>
+                                        </div>
+                                    </td>
+                                    <td>kaylynnpress@gmail.com</td>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <div class="bg-secondary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-mail-open-line m-0"></i></div>
+                                            <div class="bg-primary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-chat-3-line m-0"></i></div>
+                                            <div class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                    class="ri-phone-line m-0"></i></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary">Message</a>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <a href="#" class="text-body"><i class="las la-pen mr-3"></i></a>
+                                            <a href="#" class="text-body"><i
+                                                    class="las la-trash-alt mr-0"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <img src="/webkit/assets/images/user/03.jpg"
+                                                class="img-fluid rounded-circle avatar-40" alt="image">
+                                            <h5 class="ml-3">Corey Press</h5>
+                                        </div>
+                                    </td>
+                                    <td>coreypress@gmail.com</td>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <div class="bg-secondary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-mail-open-line m-0"></i></div>
+                                            <div class="bg-primary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-chat-3-line m-0"></i></div>
+                                            <div class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                    class="ri-phone-line m-0"></i></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary">Message</a>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <a href="#" class="text-body"><i class="las la-pen mr-3"></i></a>
+                                            <a href="#" class="text-body"><i
+                                                    class="las la-trash-alt mr-0"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <img src="/webkit/assets/images/user/04.jpg"
+                                                class="img-fluid rounded-circle avatar-40" alt="image">
+                                            <h5 class="ml-3">Zain Carder</h5>
+                                        </div>
+                                    </td>
+                                    <td>zaincarder@gmail.com</td>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <div class="bg-secondary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-mail-open-line m-0"></i></div>
+                                            <div class="bg-primary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-chat-3-line m-0"></i></div>
+                                            <div class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                    class="ri-phone-line m-0"></i></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary">Message</a>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <a href="#" class="text-body"><i class="las la-pen mr-3"></i></a>
+                                            <a href="#" class="text-body"><i
+                                                    class="las la-trash-alt mr-0"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <img src="/webkit/assets/images/user/05.jpg"
+                                                class="img-fluid rounded-circle avatar-40" alt="image">
+                                            <h5 class="ml-3">Erin Donin</h5>
+                                        </div>
+                                    </td>
+                                    <td>erindonin@gmail.com</td>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <div class="bg-secondary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-mail-open-line m-0"></i></div>
+                                            <div class="bg-primary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-chat-3-line m-0"></i></div>
+                                            <div class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                    class="ri-phone-line m-0"></i></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary">Message</a>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <a href="#" class="text-body"><i class="las la-pen mr-3"></i></a>
+                                            <a href="#" class="text-body"><i
+                                                    class="las la-trash-alt mr-0"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <img src="/webkit/assets/images/user/06.jpg"
+                                                class="img-fluid rounded-circle avatar-40" alt="image">
+                                            <h5 class="ml-3">Mira Herwitz</h5>
+                                        </div>
+                                    </td>
+                                    <td>miraherwitz@gmail.com</td>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <div class="bg-secondary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-mail-open-line m-0"></i></div>
+                                            <div class="bg-primary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-chat-3-line m-0"></i></div>
+                                            <div class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                    class="ri-phone-line m-0"></i></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary">Message</a>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <a href="#" class="text-body"><i class="las la-pen mr-3"></i></a>
+                                            <a href="#" class="text-body"><i
+                                                    class="las la-trash-alt mr-0"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <img src="/webkit/assets/images/user/07.jpg"
+                                                class="img-fluid rounded-circle avatar-40" alt="image">
+                                            <h5 class="ml-3">Kaiya George</h5>
+                                        </div>
+                                    </td>
+                                    <td>kaiyageorge@gmail.com</td>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <div class="bg-secondary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-mail-open-line m-0"></i></div>
+                                            <div class="bg-primary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-chat-3-line m-0"></i></div>
+                                            <div class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                    class="ri-phone-line m-0"></i></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary">Message</a>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <a href="#" class="text-body"><i class="las la-pen mr-3"></i></a>
+                                            <a href="#" class="text-body"><i
+                                                    class="las la-trash-alt mr-0"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <img src="/webkit/assets/images/user/08.jpg"
+                                                class="img-fluid rounded-circle avatar-40" alt="image">
+                                            <h5 class="ml-3">Lincoln George</h5>
+                                        </div>
+                                    </td>
+                                    <td>lincolngeorge@gmail.com</td>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <div class="bg-secondary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-mail-open-line m-0"></i></div>
+                                            <div class="bg-primary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-chat-3-line m-0"></i></div>
+                                            <div class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                    class="ri-phone-line m-0"></i></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary">Message</a>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <a href="#" class="text-body"><i class="las la-pen mr-3"></i></a>
+                                            <a href="#" class="text-body"><i
+                                                    class="las la-trash-alt mr-0"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <img src="/webkit/assets/images/user/09.jpg"
+                                                class="img-fluid rounded-circle avatar-40" alt="image">
+                                            <h5 class="ml-3">Paityn Siphron</h5>
+                                        </div>
+                                    </td>
+                                    <td>paitynsiphron@gmail.com</td>
+                                    <td>
+                                        <div class="media align-items-center">
+                                            <div class="bg-secondary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-mail-open-line m-0"></i></div>
+                                            <div class="bg-primary-light rounded-circle iq-card-icon-small mr-3"><i
+                                                    class="ri-chat-3-line m-0"></i></div>
+                                            <div class="bg-success-light rounded-circle iq-card-icon-small"><i
+                                                    class="ri-phone-line m-0"></i></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary">Message</a>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <a href="#" class="text-body"><i class="las la-pen mr-3"></i></a>
+                                            <a href="#" class="text-body"><i
+                                                    class="las la-trash-alt mr-0"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Page end  -->
+            </div>
+        </div>
+    </div>
+    <!-- Wrapper End-->
+
+    <!-- Modal list start -->
+    <!-- End Modal list start -->
+
+    <!-- Footer Plugin -->
+    @include('template.footer_plugin')
+    <!-- End Footer Plugin -->
 </body>
 
 </html>
