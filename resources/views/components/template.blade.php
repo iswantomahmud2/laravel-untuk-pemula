@@ -36,8 +36,7 @@
         <!-- End Sidebar -->
 
         <!-- Top Navbar -->
-        {{-- @include('components.navbar_top') --}}
-        
+        @include('components.navbar_top')
         <!-- End Top Navbar -->
         <div class="content-page">
             <div class="container-fluid">
